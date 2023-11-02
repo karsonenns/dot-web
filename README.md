@@ -1,38 +1,11 @@
-# HTML Tailwind starter
+#Dot Web
 
-This start was build for people not needing any framework.
-It's sometimes enough to just have a plain HTML file, but leverage the power of Tailwind CSS.
+#Introduction
+A web implementation example of Dot by https://new.computer
 
-The project uses the Tailwind purge to make the files as clean as possible.
+![img.png](img.png)
 
-## Installation
+## Tech
 
-The installation is very easy run the install command.
-
-```bash
-npm install
-```
-
-Next up we can run the dev server:
-
-```bash
-npm run dev
-```
-
-And your website will start up.
-
-**Note - make sure to install live-server globally as a dependancy or it will not work**
-
-```bash
-npm install -g live-server
-```
-
-## Modifying the project
-
-You can then modify the `tailwind.config.js` for your own custom colors if needed
-And modify the `index.html` inside the `src` directory.
-
-## Read more
-
-If you're interested to read more about this project.
-Check out the article I wrote on [HTML Tailwind starter](https://daily-dev-tips.com/posts/plain-html-starter-with-tailwind-css/)
+* Tailwind
+* HTML/CSS/JS

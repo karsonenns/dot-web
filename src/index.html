@@ -2,13 +2,158 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Basic HTML/Tailwind starter</title>
-    <meta name="description" content="Basic HTML/Tailwind starter" />
-    <meta name="author" content="Daily Dev Tips" />
+    <title>Dot Web Demo</title>
+    <meta name="description" content="new.computers Dot implement for the web." />
+    <meta name="author" content="Nix Caldwell" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      .animated-background{
+        opacity: 0;
+        animation: backgroundIn 1.2s forwards;
+      }
+
+      .card {
+        opacity: 0; /* Start with cards hidden */
+        filter: blur(5px); /* Start with cards blurred */
+        animation: explodeOut 1s cubic-bezier(0, 0, 0.37, 0.95) forwards;
+      }
+
+      .title{
+        opacity: 0; /* Start with cards hidden */
+        filter: blur(5px); /* Start with cards blurred */
+        animation: explodeOutSmall 800ms forwards;
+        animation-delay: 200ms;
+        mix-blend-mode: soft-light;
+      }
+
+      .pressed{
+        transform-origin: center center;
+        transform: scale(0.95) rotate(var(--rotation)); /* 90% of the original size */
+        transition: transform 100ms ease-in-out;
+      }
+
+      .card-1 {
+        --rotation: -1.8deg; /* Set rotation using CSS variable for the first card */
+        animation-delay: 0.8s;
+      }
+
+      .card-2 {
+        --rotation: 3.35deg; /* No rotation for the second card */
+        animation-delay: 1s;
+      }
+
+      .card-3 {
+        --rotation: -1.8deg; /* Set rotation using CSS variable for the third card */
+        animation-delay: 1.2s;
+      }
+
+      /* Common animation for all cards */
+      @keyframes explodeOut {
+        0% {
+          opacity: 0;
+          transform: scale(0.6);
+        }
+
+
+
+        100% {
+          opacity: 1;
+          filter: blur(0);
+          transform: scale(1) rotate(var(--rotation)); /* Use the CSS variable for rotation */
+        }
+      }
+
+      @keyframes explodeOutSmall {
+        0% {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+
+        100% {
+          opacity: 1;
+          filter: blur(0);
+          transform: scale(1) rotate(var(--rotation)); /* Use the CSS variable for rotation */
+        }
+      }
+
+      @keyframes backgroundIn {
+
+        0% {
+          opacity: 0;
+          transform: scale(0);
+        }
+
+        100%{
+          opacity: 1;
+          transform: scale(1);
+        }
+
+      }
+    </style>
+
   </head>
   <body>
-    <div class="w-screen h-screen bg-daily-dev-tips flex items-center justify-center">Welcome</div>
+    <a href="https://x.com/nixcald" class="block py-4 w-full text-center text-neutral-400 text-sm">By @nix_cald</a>
+    <div class="text-center relative bg-dot max-w-md m-auto h-[800px] rounded-[30px]">
+      <div class="animated-background top-12 z-0 absolute w-full h-2/3 bg-gradient-to-bl  from-purblur  to-yelblur rounded-full blur-3xl"></div>
+
+      <div class=" flex flex-col gap-6 mx-6">
+        <div class="text-zinc-600 text-base font-medium mt-10">9:00AM</div>
+        <div class="title relative z-10   text-center text-white text-7xl font-medium leading-[62px] tracking-tight ">Good<br/>Morning</div>
+
+
+        <div class="card card-1 relative -top-9 text-left z-10 w-52 p-6 origin-bottom-right  bg-white rounded-3xl shadow-2xl flex-col justify-center items-start gap-6 inline-flex">
+          <div class="text-black text-lg font-medium font-serif leading-tight">I thrive in new environments and welcome the adventures of learning.</div>
+          <div class="text-neutral-500 text-base font-medium">Daily Affirmation</div>
+        </div>
+
+        <div class="card card-2 absolute  overflow-hidden top-56 right-5 z-10 w-52 h-72 origin-left rotate-[3.35deg] rounded-3xl shadow-2xl bg-white flex justify-end items-end text-left">
+          <img src="/assets/card-2.webp" class="opacity-70  absolute w-full h-full left-0 right-0 top-0 bottom-0 object-cover">
+          <div class="relative z-10 text-white text-base font-semibold leading-tight p-6 bg-gradient-to-t from-[#BB9C9B]">
+            Vivian’s birthday is coming up! Have you thought of a present?
+          </div>
+        </div>
+
+        <div class="card card-3 relative top-4 left-5 -top-12 z-20 text-left w-48 p-6 origin-top-right  bg-white rounded-3xl shadow-2xl flex-col justify-center items-start gap-6 inline-flex">
+          <div class="text-black text-lg font-medium leading-tight">
+            <div class=" text-black text-4xl font-bold">Friday</div>
+            <div class=" text-purblur text-4xl font-medium font-['Test Söhne']">Oct 27</div>
+          </div>
+          <div class="text-neutral-500 text-base font-medium">Daily Affirmation</div>
+        </div>
+
+        <div class="mt-12 ">
+          <div class="p-4 bg-neutral-300 rounded-3xl flex gap-2 items-center">
+
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="7" width="3" height="17" rx="1.5" fill="#232323"/>
+              <rect x="17" y="7" width="3" height="17" rx="1.5" transform="rotate(90 17 7)" fill="#232323"/>
+            </svg>
+            <span>Share with Dot...</span>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
   </body>
+
+<script>
+  const card1 = document.querySelector('.card-1');
+
+
+  card1.addEventListener('touchstart', function(){
+    card1.classList.remove('rotate-[-1.8deg]');
+    card1.classList.add('pressed');
+    card1.classList.remove('card');
+  })
+  card1.addEventListener('touchend', function(){
+    card1.classList.remove('pressed');
+    card1.classList.add('rotate-[-1.8deg]');
+    card1.classList.add('full-screen');
+
+  })
+</script>
 </html>
