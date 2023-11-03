@@ -94,42 +94,44 @@
     </style>
 
   </head>
-  <body class="antialiased transform-gpu">
-    <a href="https://x.com/nixCald" class="block py-4 w-full text-center text-neutral-400 text-sm">I coded this on my 4-hour plane ride.</a>
-    <div class="text-center relative bg-dot max-w-md m-auto h-[800px] rounded-[30px]">
-      <div class="animated-background top-12 z-0 absolute w-full h-2/3 bg-gradient-to-bl  from-purblur  to-yelblur rounded-full blur-3xl"></div>
+  <body class="antialiased transform-gpu dark:bg-black">
+    <a href="https://x.com/nixCald" class="block py-4 w-full text-center text-neutral-400 text-sm">An unofficial web mockup of new.computer</a>
+    <div class="text-center relative dark:bg-[#111111] bg-dot max-w-md m-auto h-[800px] rounded-[30px]">
+      <div class="animated-background top-12 z-0 absolute w-full h-2/3 bg-gradient-to-bl  dark:from-[#00231A] dark:to-[#B6B6B6] from-purblur to-yelblur rounded-full blur-3xl"></div>
 
       <div class=" flex flex-col gap-6 mx-6">
-        <div class="text-zinc-600 text-base font-medium mt-10">9:00AM</div>
-        <div class="title relative z-10 text-center text-white text-7xl font-medium leading-[62px] tracking-tight ">Good<br/>Morning</div>
+        <div class="text-zinc-600 text-base font-medium mt-10 dark:hidden">9:00AM</div>
+        <div class="text-zinc-300 text-base font-medium mt-10 dark:block hidden">9:00PM</div>
+        <div class="title relative z-10 text-center text-white text-7xl font-medium leading-[62px] tracking-tight dark:hidden ">Good<br/>Morning</div>
+        <div class="title relative z-10 text-center text-white text-7xl font-medium leading-[62px] tracking-tight dark:block hidden">Good<br/>Evening</div>
 
 
-        <div class=" card transform-gpu card-1 relative -top-9 text-left z-10 w-52 p-6 origin-bottom-right  bg-white rounded-3xl shadow-2xl flex-col justify-center items-start gap-6 inline-flex">
-          <div class="text-black text-lg font-medium font-serif leading-tight">I thrive in new environments and welcome the adventures of learning.</div>
+        <div class=" card transform-gpu card-1 relative -top-9 text-left z-10 w-52 p-6 origin-bottom-right  bg-white dark:bg-black rounded-3xl shadow-2xl flex-col justify-center items-start gap-6 inline-flex">
+          <div class="text-black text-lg font-medium font-serif leading-tight dark:text-white ">I thrive in new environments and welcome the adventures of learning.</div>
           <div class="text-neutral-500 text-base font-medium">Daily Affirmation</div>
         </div>
 
         <div class="card transform-gpu card-2 absolute  overflow-hidden top-56 right-5 z-10 w-52 h-72 origin-left rotate-[3.35deg] rounded-3xl shadow-2xl bg-white flex justify-end items-end text-left">
-          <img src="/assets/card-2.webp" class="opacity-70  absolute w-full h-full left-0 right-0 top-0 bottom-0 object-cover">
-          <div class="relative z-10 text-white text-base font-semibold leading-tight p-6 bg-gradient-to-t from-[#BB9C9B]">
+          <img src="https://cdn.midjourney.com/c50968bf-45da-4b7f-990b-01de05271a6d/0_0.webp" class="opacity-70  absolute w-full h-full left-0 right-0 top-0 bottom-0 object-cover">
+          <div class="relative z-10 text-white text-base font-semibold leading-tight p-6 bg-gradient-to-t from-[#BB9C9B] dark:from-[#000000]">
             Vivian’s birthday is coming up! Have you thought of a present?
           </div>
         </div>
 
-        <div class="card transform-gpu card-3 relative top-4 left-5 -top-12 z-20 text-left w-48 p-6 origin-top-right  bg-white rounded-3xl shadow-2xl flex-col justify-center items-start gap-6 inline-flex">
+        <div class="card transform-gpu card-3 relative top-4 left-5  z-20 text-left w-48 p-6 origin-top-right  bg-white dark:bg-black rounded-3xl shadow-2xl flex-col justify-center items-start gap-6 inline-flex">
           <div class="text-black text-lg font-medium leading-tight">
-            <div class=" text-black text-4xl font-bold">Friday</div>
-            <div class=" text-purblur text-4xl font-medium font-['Test Söhne']">Oct 27</div>
+            <div class=" text-black text-4xl font-bold dark:text-white">Friday</div>
+            <div class=" text-purblur text-4xl font-medium dark:text-[#458574]">June 4</div>
           </div>
           <div class="text-neutral-500 text-base font-medium">Daily Affirmation</div>
         </div>
 
         <div class="mt-12 ">
-          <div class="p-4 bg-neutral-300 rounded-3xl flex gap-2 items-center">
+          <div class="p-4 bg-neutral-300 rounded-3xl flex gap-2 items-center dark:bg-[#252525] dark:text-white">
 
-            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="7" width="3" height="17" rx="1.5" fill="#232323"/>
-              <rect x="17" y="7" width="3" height="17" rx="1.5" transform="rotate(90 17 7)" fill="#232323"/>
+            <svg width="17" height="17" viewBox="0 0 17 17"  xmlns="http://www.w3.org/2000/svg" class="dark:fill-white opacity-50">
+              <rect x="7" width="3" height="17" rx="1.5" "/>
+              <rect x="17" y="7" width="3" height="17" rx="1.5" transform="rotate(90 17 7)" />
             </svg>
             <span>Share with Dot...</span>
 
